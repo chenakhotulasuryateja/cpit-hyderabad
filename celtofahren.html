@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius to Fahrenhite</title>
+</head>
+<body>
+    <h1>Converting Celsius to Fahrenhite</h1>
+
+    <label for="cel">Enter your Celsius Temperature here :</label>
+    <input type="number" name="Celsius" id="cel">
+    <button onclick="myTemp()">Click Me!!</button><br><br>
+    <label for="fah">Here is your Fahrenhite Temperature here :</label>
+    <p id="fah"></p>
+
+
+    <script>
+        var myFah;
+        function myTemp(){
+            var myCell = parseFloat(document.getElementById("cel").value);
+            myFah=(9/5*myCell)+32;
+            document.getElementById("fah").innerHTML=myFah;
+        }
+    </script>
+</body>
+</html>

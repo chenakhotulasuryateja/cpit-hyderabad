@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year</title>
+    <style>
+        div{
+            margin-left: auto;
+            padding: 20px;
+            width: 400px;
+            margin-right: auto;
+            background-color: aqua;
+        }
+        button{
+            background-color: rgb(47, 255, 71);
+            border: none;
+            border-radius: 5px;
+            color: red;
+            padding: 10px;
+
+        }
+        h1{
+            background-color: palegreen;
+            color: black;
+            padding: 20px;
+            font-size: 18px;
+
+        }
+        #result{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:black;
+       }
+       label{
+        color: brown;
+       }
+       #calc{
+        font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Finding out if the year is a leap year or not!</h1>
+    <label for="yea">Enter the year:</label>
+    <input type="number" name="year" id="yea">
+    <button onclick="yearGuess()">Click Me!!</button>
+    <p id="calc"></p>
+    </div>
+    <script>
+        function yearGuess(){
+            var year = parseInt(document.getElementById("yea").value);
+            console.log("Entered Number :"+year);
+            if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)){
+                document.getElementById("calc").innerHTML="The given year is a leap year!!"
+            }
+            else{
+                document.getElementById("calc").innerHTML="The given year is not a leap year!!"
+            }
+    }
+    </script>
+</body>
+</html>

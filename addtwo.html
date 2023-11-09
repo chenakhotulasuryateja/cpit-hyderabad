@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding two numbers</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        div{
+            margin-left: auto;
+            width: 400px;
+            padding: 20px;
+            margin-right: auto;
+            background-color: lightskyblue;
+        }
+        button{
+            border-radius: 15px;
+            background-color: aquamarine;
+            padding: 10px;
+            float: left;
+        }
+        label{
+            float: left;
+        }
+        input{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Adding two numbers:</h1><br>
+        <label for="fnum">Enter the First Number  :</label>
+        <input type="number" name="First Number" id="fnum"><br><br>
+        <label for="snum">Enter the Second Number :</label>
+        <input type="number" name="Second Number" id="snum"><br><br>
+        <button onclick="numAdd()">Add</button>
+        <button type="reset">Clear</button>
+        <h4>Result : <span id="result"></span></h4>
+    </div>
+
+    <script>
+        function numAdd(){
+            var a = parseFloat(document.getElementById("fnum").value);
+            var b = parseFloat(document.getElementById("snum").value);
+            var sum = a+b;
+
+            document.getElementById("result").innerHTML=sum;
+        }
+    </script>
+</body>
+</html>
